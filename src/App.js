@@ -10,6 +10,7 @@ import employees from "./employees.json";
 function App() {
   // ? is it working?
   console.log(employees.results[0].name.first);
+  console.log(employees.results[0].picture.medium);
   return (
     <Wrapper>
       <Title>Employee Directory</Title>
@@ -17,7 +18,7 @@ function App() {
       <ExampleCard />
 
       <EmployeeCard
-        picture=""
+        picture={employees.results[0].picture.medium}
         firstName={employees.results[0].name.first}
         lastName={employees.results[0].name.last}
         location={employees.results[0].location.country}

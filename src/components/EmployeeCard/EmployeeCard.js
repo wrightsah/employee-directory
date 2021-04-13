@@ -5,12 +5,13 @@ import "./style.css";
 // picture, name.first, name.last, location.city, email, phone
 
 function EmployeeCard(props) {
+  console.log('the image URL is ' + props.picture);
   return (
     <div className="card">
       <div className="img-container">
         <img
           alt="sofiaturner"
-          src={props.image}
+          src={props.picture}
         />
       </div>
       <div className="content">

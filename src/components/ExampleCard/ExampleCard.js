@@ -10,7 +10,7 @@ function ExampleCard() {
       <div className="img-container">
         <img
           alt="sofiaturner"
-          src="https://randomuser.me/api/portraits/med/women/72.jpg"
+          src="https://randomuser.me/api/portraits/women/72.jpg"
         />
       </div>
       <div className="content">
