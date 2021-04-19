@@ -1,19 +1,21 @@
 // This component for Navbar
 import React from "react";
+import "./style.css";
+
 
 function NavbarComponent() {
   return (
     <div>
-      <nav class="navbar navbar-light bg-light" expand="large">
-        <a class="navbar-brand">Employee Directory</a>
-        <form class="form-inline">
+      <nav className="navbar navbar-light bg-light nav-fill w-100" >
+        <a className="navbar-brand" href='../public/index.html'>Employee Directory</a>
+        <form className="form-inline">
           <input
-            class="form-control mr-sm-2"
+            className="form-control mr-sm-2"
             type="search"
             placeholder="Search"
             aria-label="Search"
           />
-          <button class="btn btn-outline-success my-2 my-sm-0" type="submit">
+          <button className="btn btn-outline-success my-2 my-sm-0" type="submit">
             Search by Location
           </button>
         </form>

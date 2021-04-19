@@ -1,20 +1,19 @@
 import "./App.css";
 import Wrapper from "./components/Wrapper";
-import Title from "./components/Title";
-import NavbarComponent from "./components/NavbarComponent"
+// import Title from "./components/Title";
+import NavbarComponent from './components/NavbarComponent/NavbarComponent';
 
-import EmployeeCard from "./components/EmployeeCard/EmployeeCard";
-import ExampleCard from "./components/ExampleCard/ExampleCard";
-
+import EmployeeCardList from "./components/EmployeeCardList/EmployeeCardList";
 
 import employees from "./employees.json";
+
+console.log(employees);
 
 function App() {
   // ? is it working?
   // console.log(employees.results[0].name.first);
   // console.log(employees.results[0].picture.large);
   return (
-    
     <Wrapper>
       <NavbarComponent />
       {/* <Title>Employee Directory</Title> */}
@@ -29,18 +28,19 @@ function App() {
         email={employees.results[0].email}
         phone={employees.results[0].phone}
       /> */}
-
+      <EmployeeCardList data={employees} />
       {/* Loop through entire employees array */}
-      {employees.results.map((employee) => (
+      {/* {employees.results.map((employee) => (
         <EmployeeCard
+          key={employee.id.value}
           picture={employee.picture.large}
           firstName={employee.name.first}
           lastName={employee.name.last}
-          location={employee.location.country}
+          country={employee.location.country}
           email={employee.email}
           phone={employee.phone}
         />
-      ))}
+      ))} */}
     </Wrapper>
   );
 }
