@@ -1,7 +1,7 @@
 import "./App.css";
 import Wrapper from "./components/Wrapper";
 // import Title from "./components/Title";
-import NavbarComponent from './components/NavbarComponent/NavbarComponent';
+import NavbarComponent from "./components/NavbarComponent/NavbarComponent";
 
 import EmployeeCardList from "./components/EmployeeCardList/EmployeeCardList";
 
@@ -13,10 +13,21 @@ function App() {
   // ? is it working?
   // console.log(employees.results[0].name.first);
   // console.log(employees.results[0].picture.large);
+
+   function handleSortAZ() {
+    console.log("handleSortAZ");
+  }
+
+   function handleSortLocation() {
+    console.log("handleSortLocation");
+  }
+
   return (
     <div>
-    
-      <NavbarComponent />
+      <NavbarComponent
+        handleSortAZ={handleSortAZ}
+        handleSortLocation={handleSortLocation}
+      />
       {/* <Title>Employee Directory</Title> */}
       {/* This component is only for development */}
       {/* <ExampleCard /> */}
@@ -30,9 +41,9 @@ function App() {
         phone={employees.results[0].phone}
       /> */}
       <Wrapper>
-      <EmployeeCardList data={employees} />
-      {/* Loop through entire employees array */}
-      {/* {employees.results.map((employee) => (
+        <EmployeeCardList data={employees} />
+        {/* Loop through entire employees array */}
+        {/* {employees.results.map((employee) => (
         <EmployeeCard
           key={employee.id.value}
           picture={employee.picture.large}
@@ -44,8 +55,7 @@ function App() {
         />
       ))} */}
       </Wrapper>
-      </div>
-    
+    </div>
   );
 }
 
