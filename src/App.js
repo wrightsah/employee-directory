@@ -14,7 +14,8 @@ function App() {
   // console.log(employees.results[0].name.first);
   // console.log(employees.results[0].picture.large);
   return (
-    <Wrapper>
+    <div>
+    
       <NavbarComponent />
       {/* <Title>Employee Directory</Title> */}
       {/* This component is only for development */}
@@ -28,6 +29,7 @@ function App() {
         email={employees.results[0].email}
         phone={employees.results[0].phone}
       /> */}
+      <Wrapper>
       <EmployeeCardList data={employees} />
       {/* Loop through entire employees array */}
       {/* {employees.results.map((employee) => (
@@ -41,7 +43,9 @@ function App() {
           phone={employee.phone}
         />
       ))} */}
-    </Wrapper>
+      </Wrapper>
+      </div>
+    
   );
 }
 

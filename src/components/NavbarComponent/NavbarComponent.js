@@ -10,13 +10,16 @@ function NavbarComponent() {
         <a className="navbar-brand" href='../public/index.html'>Employee Directory</a>
         <form className="form-inline">
           <input
-            className="form-control mr-sm-2"
+            className="form-control mr-md-2"
             type="search"
             placeholder="Search"
             aria-label="Search"
           />
           <button className="btn btn-outline-success my-2 my-sm-0" type="submit">
-            Search by Location
+            Filter by Location
+          </button>
+          <button className="btn btn-outline-success my-2 my-sm-0" type="submit">
+            Sort A-Z
           </button>
         </form>
       </nav>

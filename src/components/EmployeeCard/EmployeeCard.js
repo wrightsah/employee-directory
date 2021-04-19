@@ -7,11 +7,11 @@ import "./style.css";
 function EmployeeCard({picture, firstName, lastName, country, email, phone}) {
   // console.log("the image URL is " + props.picture);
   return (
-    <div className="card">
+    <div className="card rounded">
       <div className="img-container">
         <img alt="sofiaturner" src={picture} />
       </div>
-      <div className="content">
+      <div className="content rounded">
         <ul>
           <li>
             <strong>First Name:</strong> {firstName}
