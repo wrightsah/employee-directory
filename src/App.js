@@ -14,11 +14,11 @@ function App() {
   // console.log(employees.results[0].name.first);
   // console.log(employees.results[0].picture.large);
 
-   function handleSortAZ() {
+  function handleSortAZ() {
     console.log("handleSortAZ");
   }
 
-   function handleSortLocation() {
+  function handleSortLocation() {
     console.log("handleSortLocation");
   }
 
@@ -31,15 +31,7 @@ function App() {
       {/* <Title>Employee Directory</Title> */}
       {/* This component is only for development */}
       {/* <ExampleCard /> */}
-      {/* This component displays one employee */}
-      {/* <EmployeeCard
-        picture={employees.results[0].picture.large}
-        firstName={employees.results[0].name.first}
-        lastName={employees.results[0].name.last}
-        location={employees.results[0].location.country}
-        email={employees.results[0].email}
-        phone={employees.results[0].phone}
-      /> */}
+
       <Wrapper>
         <EmployeeCardList data={employees} />
         {/* Loop through entire employees array */}
