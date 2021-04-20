@@ -1,3 +1,4 @@
+import React, { useState } from "react";
 import "./App.css";
 import Wrapper from "./components/Wrapper";
 // import Title from "./components/Title";
@@ -6,18 +7,23 @@ import NavbarComponent from "./components/NavbarComponent/NavbarComponent";
 import EmployeeCardList from "./components/EmployeeCardList/EmployeeCardList";
 
 import employees from "./employees.json";
-
-console.log(employees);
+// Test import
+// console.log(employees);
 
 function App() {
   // ? is it working?
-  // console.log(employees.results[0].name.first);
-  // console.log(employees.results[0].picture.large);
+  // hooks must be here at the top
 
+  // set the initial state
+  const [data, setEmployees] = useState(employees.results);
+  console.log(data);
+
+  // function to sort by name
   function handleSortAZ() {
     console.log("handleSortAZ");
+    setEmployees((currentEmployees) => currentEmployees);
   }
-
+  // function to filter by location
   function handleSortLocation() {
     console.log("handleSortLocation");
   }
@@ -33,7 +39,7 @@ function App() {
       {/* <ExampleCard /> */}
 
       <Wrapper>
-        <EmployeeCardList data={employees} />
+        <EmployeeCardList data={data} />
         {/* Loop through entire employees array */}
         {/* {employees.results.map((employee) => (
         <EmployeeCard

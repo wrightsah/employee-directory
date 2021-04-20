@@ -3,7 +3,7 @@ import EmployeeCard from "../EmployeeCard/EmployeeCard";
 
 
 function EmployeeCardList({ data }) {
-  return data.results.map((employee) => (
+  return data.map((employee) => (
     <EmployeeCard
       key={employee.id.value}
       picture={employee.picture.large}
