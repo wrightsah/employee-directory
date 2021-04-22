@@ -16,12 +16,19 @@ function App() {
 
   // set the initial state
   const [data, setEmployees] = useState(employees.results);
-  console.log(data);
+  // console.log(data);
 
   // function to sort by name
+  function sortAZ() {
+    setEmployees(data.sort((a, b) => (a.name.first > b.name.first ? 1 : -1)));
+    return {data}
+  }
+  // function to handle sort
   function handleSortAZ() {
     console.log("handleSortAZ");
-    setEmployees((currentEmployees) => currentEmployees);
+    // setEmployees(data => data.sort((a, b) => (a.name.first > b.name.first) ? 1 : -1));
+    sortAZ();
+    console.log(data);
   }
   // function to filter by location
   function handleSortLocation() {
